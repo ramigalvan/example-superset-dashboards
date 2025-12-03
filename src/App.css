@@ -1,0 +1,103 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Un gris muy suave de fondo profesional */
+}
+
+.app-header {
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* CONTENEDOR PRINCIPAL DEL DASHBOARD */
+#superset-container {
+  width: 95%; /* Un poco de margen a los lados */
+  max-width: 1600px; /* Que no se estire infinitamente en pantallas ultra-wide */
+  margin: 0 auto; /* Centrado horizontalmente */
+  
+  /* Altura Responsive */
+  height: 85vh; 
+  min-height: 600px;
+  
+  /* Estética del contenedor */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  
+  /* Importante para el iframe */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* REGLA CRÍTICA: Forzar al iframe de Superset a ocupar todo el espacio */
+#superset-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
